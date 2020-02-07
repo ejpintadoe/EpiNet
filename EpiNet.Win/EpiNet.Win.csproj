@@ -177,122 +177,180 @@
       <DependentUpon>DataClassEpiNet.dbml</DependentUpon>
     </Compile>
     <Compile Include="Controls.cs" />
-    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMailEdit.cs" />
+    <Compile Include="Forms\frmMailEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmMailEdit.Designer.cs">
       <DependentUpon>frmMailEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmUser1Edit.cs" />
+    <Compile Include="Forms\frmUser1Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmUser1Edit.Designer.cs">
       <DependentUpon>frmUser1Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\wfMain.cs" />
+    <Compile Include="Forms\wfMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\wfMain.Designer.cs">
       <DependentUpon>wfMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\XtraForm1.cs" />
+    <Compile Include="Forms\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\XtraForm1.Designer.cs">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs" />
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Maestros\Entidad\frmEntidad.cs" />
+    <Compile Include="Maestros\Entidad\frmEntidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Maestros\Entidad\frmEntidad.Designer.cs">
       <DependentUpon>frmEntidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="Maestros\Entidad\frmEntidadEditar.cs" />
+    <Compile Include="Maestros\Entidad\frmEntidadEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Maestros\Entidad\frmEntidadEditar.Designer.cs">
       <DependentUpon>frmEntidadEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Mail.cs" />
+    <Compile Include="Modules\Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\Mail.Designer.cs">
       <DependentUpon>Mail.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecursosHumanos\Empleado\frmEmpleado.cs" />
+    <Compile Include="RecursosHumanos\Empleado\frmEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RecursosHumanos\Empleado\frmEmpleado.Designer.cs">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="RecursosHumanos\Empleado\frmEmpleadoEditar.cs" />
+    <Compile Include="RecursosHumanos\Empleado\frmEmpleadoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RecursosHumanos\Empleado\frmEmpleadoEditar.Designer.cs">
       <DependentUpon>frmEmpleadoEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Ventas\XR_BoletaVenta.cs" />
+    <Compile Include="Reportes\Ventas\XR_BoletaVenta.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\XR_BoletaVenta.Designer.cs">
       <DependentUpon>XR_BoletaVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Ventas\XR_Cotizacion.cs" />
+    <Compile Include="Reportes\Ventas\XR_Cotizacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\XR_Cotizacion.Designer.cs">
       <DependentUpon>XR_Cotizacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\Ventas\XR_FacturaVenta.cs" />
+    <Compile Include="Reportes\Ventas\XR_FacturaVenta.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\Ventas\XR_FacturaVenta.Designer.cs">
       <DependentUpon>XR_FacturaVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes\XtraReport1.cs" />
+    <Compile Include="Reportes\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reportes\XtraReport1.Designer.cs">
       <DependentUpon>XtraReport1.cs</DependentUpon>
     </Compile>
     <Compile Include="Resources.cs" />
-    <Compile Include="Seguridad\Modulo\frmModuloEditar.cs" />
+    <Compile Include="Seguridad\Modulo\frmModuloEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguridad\Modulo\frmModuloEditar.Designer.cs">
       <DependentUpon>frmModuloEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Seguridad\Modulo\frmModulo.cs" />
+    <Compile Include="Seguridad\Modulo\frmModulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguridad\Modulo\frmModulo.Designer.cs">
       <DependentUpon>frmModulo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\user1.cs" />
+    <Compile Include="Modules\user1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modules\user1.Designer.cs">
       <DependentUpon>user1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Seguridad\Modulo\ToolbarForm1.cs" />
+    <Compile Include="Seguridad\Modulo\ToolbarForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguridad\Modulo\ToolbarForm1.Designer.cs">
       <DependentUpon>ToolbarForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seguridad\Opcion\frmOpciones.cs" />
+    <Compile Include="Seguridad\Opcion\frmOpciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguridad\Opcion\frmOpciones.Designer.cs">
       <DependentUpon>frmOpciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Seguridad\Perfil\frmPerfil.cs" />
+    <Compile Include="Seguridad\Perfil\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguridad\Perfil\frmPerfil.Designer.cs">
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Seguridad\Usuario\frmUsuario.cs" />
+    <Compile Include="Seguridad\Usuario\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguridad\Usuario\frmUsuario.Designer.cs">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Seguridad\Usuario\frmUsuarioEditar.cs" />
+    <Compile Include="Seguridad\Usuario\frmUsuarioEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Seguridad\Usuario\frmUsuarioEditar.Designer.cs">
       <DependentUpon>frmUsuarioEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="userLogin.cs" />
+    <Compile Include="userLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="userLogin.Designer.cs">
       <DependentUpon>userLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventas\Facturacion\frmFacturacion.cs" />
+    <Compile Include="Ventas\Facturacion\frmFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\Facturacion\frmFacturacion.Designer.cs">
       <DependentUpon>frmFacturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventas\Facturacion\frmFacturacionEditar.cs" />
+    <Compile Include="Ventas\Facturacion\frmFacturacionEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\Facturacion\frmFacturacionEditar.Designer.cs">
       <DependentUpon>frmFacturacionEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventas\Producto\frmProducto.cs" />
+    <Compile Include="Ventas\Producto\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\Producto\frmProducto.Designer.cs">
       <DependentUpon>frmProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventas\Producto\frmProductoEditar.cs" />
+    <Compile Include="Ventas\Producto\frmProductoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\Producto\frmProductoEditar.Designer.cs">
       <DependentUpon>frmProductoEditar.cs</DependentUpon>
     </Compile>
