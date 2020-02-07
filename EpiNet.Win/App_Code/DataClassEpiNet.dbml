@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBEPINET" Class="DataClassEpiNetDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=DBEPINET;Persist Security Info=True;User ID=sa" SettingsObjectName="EpiNet.Win.Properties.Settings" SettingsPropertyName="DBEPINETConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_EPI_PERFIL" Member="TBL_EPI_PERFIL">
+    <Type Name="TBL_EPI_PERFIL">
+      <Column Name="EPI_INT_IDPERFIL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_NOMBREPERFIL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_PERFIL_TBL_EPI_USUARIO" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_IDPERFIL" OtherKey="EPI_INT_IDPERFIL" Type="TBL_EPI_USUARIO" />
+      <Association Name="TBL_EPI_PERFIL_TBL_EPI_OPCIONMODULOPERFIL" Member="TBL_EPI_OPCIONMODULOPERFIL" ThisKey="EPI_INT_IDPERFIL" OtherKey="EPI_INT_IDPERFIL" Type="TBL_EPI_OPCIONMODULOPERFIL" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_USUARIO" Member="TBL_EPI_USUARIO">
+    <Type Name="TBL_EPI_USUARIO">
+      <Column Name="EPI_INT_IDUSUARIO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_INT_IDPERFIL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_USUARIO" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CLAVE" Type="System.String" DbType="VarChar(600)" CanBeNull="true" />
+      <Column Name="EPI_VCH_NOMBRES" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_VCH_APELLIDOPATERNO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_VCH_APELLIDOMATERNO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CORREO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_BIT_HABILITADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_VCH_SKINGALLERY" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_OPCION" Member="TBL_EPI_OPCION" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_USUARIOCREA" Type="TBL_EPI_OPCION" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_OPCION1" Member="TBL_EPI_OPCION1" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_USUARIOMODIFICA" Type="TBL_EPI_OPCION" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_MODULO" Member="TBL_EPI_MODULO" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOCREA" Type="TBL_EPI_MODULO" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_MODULO1" Member="TBL_EPI_MODULO1" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOMODIFICA" Type="TBL_EPI_MODULO" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_EMPLEADO" Member="TBL_EPI_EMPLEADO" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_EMPLEADO" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_ENTIDAD" Member="TBL_EPI_ENTIDAD" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_USUARIOCREA" Type="TBL_EPI_ENTIDAD" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_ENTIDAD1" Member="TBL_EPI_ENTIDAD1" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_USUARIOMODIFICA" Type="TBL_EPI_ENTIDAD" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_ENTIDADTIPOENTIDAD" Member="TBL_EPI_ENTIDADTIPOENTIDAD" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_USUARIOCREA" Type="TBL_EPI_ENTIDADTIPOENTIDAD" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_ENTIDADTIPOENTIDAD1" Member="TBL_EPI_ENTIDADTIPOENTIDAD1" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_USUARIOMODIFICA" Type="TBL_EPI_ENTIDADTIPOENTIDAD" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLE" Member="TBL_EPI_TIPODOCUMENTOCONTABLE" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOCREA" Type="TBL_EPI_TIPODOCUMENTOCONTABLE" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLE1" Member="TBL_EPI_TIPODOCUMENTOCONTABLE1" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOMODIFICA" Type="TBL_EPI_TIPODOCUMENTOCONTABLE" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLESERIES" Member="TBL_EPI_TIPODOCUMENTOCONTABLESERIES" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOCREA" Type="TBL_EPI_TIPODOCUMENTOCONTABLESERIES" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLESERIES1" Member="TBL_EPI_TIPODOCUMENTOCONTABLESERIES1" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOCREA" Type="TBL_EPI_TIPODOCUMENTOCONTABLESERIES" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLESERIES2" Member="TBL_EPI_TIPODOCUMENTOCONTABLESERIES2" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOMODIFICA" Type="TBL_EPI_TIPODOCUMENTOCONTABLESERIES" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_FACTURA" Member="TBL_EPI_FACTURA" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOCREA" Type="TBL_EPI_FACTURA" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_FACTURA1" Member="TBL_EPI_FACTURA1" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIOMODIFICA" Type="TBL_EPI_FACTURA" />
+      <Association Name="TBL_EPI_PERFIL_TBL_EPI_USUARIO" Member="TBL_EPI_PERFIL" ThisKey="EPI_INT_IDPERFIL" OtherKey="EPI_INT_IDPERFIL" Type="TBL_EPI_PERFIL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_OPCION" Member="TBL_EPI_OPCION">
+    <Type Name="TBL_EPI_OPCION">
+      <Column Name="EPI_INT_IDOPCION" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_NOMBREOPCION" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EPI_INT_USUARIOCREA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EPI_DAT_FECHACREACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_USUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAMODIFICACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_BIT_ESRIBBON" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_VCH_IMAGEN16X16" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EPI_VCH_IMAGEN32X32" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EPI_INT_IMAGENINDEX16X16" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IMAGENINDEX32X32" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TBL_EPI_OPCION_TBL_EPI_OPCIONMODULO" Member="TBL_EPI_OPCIONMODULO" ThisKey="EPI_INT_IDOPCION" OtherKey="EPI_INT_IDOPCION" Type="TBL_EPI_OPCIONMODULO" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_OPCION" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_USUARIOCREA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_OPCION1" Member="TBL_EPI_USUARIO1" ThisKey="EPI_INT_USUARIOMODIFICA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_MODULO" Member="TBL_EPI_MODULO">
+    <Type Name="TBL_EPI_MODULO">
+      <Column Name="EPI_INT_IDMODULO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_INT_MODULOPADRE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_NOMBREMODULO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_INT_ORDEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_PAGINA" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_VCH_WINDOWSFORM" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_VCH_APPMOVIL" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_BIT_WEB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_BIT_WINDOWS" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_BIT_MOVIL" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHACREACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAMODIFICA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIOCREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_IMAGEN16x16" Storage="_EPI_VCH_IMAGEN" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_VCH_IMAGEN32x32" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EPI_INT_IMAGENINDEX16X16" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IMAGENINDEX32X32" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TBL_EPI_MODULO_TBL_EPI_OPCIONMODULO" Member="TBL_EPI_OPCIONMODULO" ThisKey="EPI_INT_IDMODULO" OtherKey="EPI_INT_IDMODULO" Type="TBL_EPI_OPCIONMODULO" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_MODULO" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_IDUSUARIOCREA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_MODULO1" Member="TBL_EPI_USUARIO1" ThisKey="EPI_INT_IDUSUARIOMODIFICA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_OPCIONMODULOPERFIL" Member="TBL_EPI_OPCIONMODULOPERFIL">
+    <Type Name="TBL_EPI_OPCIONMODULOPERFIL">
+      <Column Name="EPI_INT_IDOPCIONMODULOPERFIL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_INT_IDPERFIL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDOPCIONMODULO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_USUARIOCREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHACREACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_USUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAMODIFICACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_PERFIL_TBL_EPI_OPCIONMODULOPERFIL" Member="TBL_EPI_PERFIL" ThisKey="EPI_INT_IDPERFIL" OtherKey="EPI_INT_IDPERFIL" Type="TBL_EPI_PERFIL" IsForeignKey="true" />
+      <Association Name="TBL_EPI_OPCIONMODULO_TBL_EPI_OPCIONMODULOPERFIL" Member="TBL_EPI_OPCIONMODULO" ThisKey="EPI_INT_IDOPCIONMODULO" OtherKey="EPI_INT_IDOPCIONMODULO" Type="TBL_EPI_OPCIONMODULO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_GENERICA" Member="TBL_EPI_GENERICA">
+    <Type Name="TBL_EPI_GENERICA">
+      <Column Name="EPI_INT_IDGENERICA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_NOMTABLA" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_INT_ORDEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_CAMPO1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_CAMPO2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CAMPO3" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CAMPO4" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CAMPO5" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ESTADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_EMPLEADO" Member="TBL_EPI_EMPLEADO" ThisKey="EPI_INT_IDGENERICA" OtherKey="EPI_INT_IDSEXO" Type="TBL_EPI_EMPLEADO" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_EMPLEADO1" Member="TBL_EPI_EMPLEADO1" ThisKey="EPI_INT_IDGENERICA" OtherKey="EPI_INT_IDESTADOCIVIL" Type="TBL_EPI_EMPLEADO" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_ENTIDAD" Member="TBL_EPI_ENTIDAD" ThisKey="EPI_INT_IDGENERICA" OtherKey="EPI_INT_IDTIPOPERSONA" Type="TBL_EPI_ENTIDAD" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_ENTIDADTIPOENTIDAD" Member="TBL_EPI_ENTIDADTIPOENTIDAD" ThisKey="EPI_INT_IDGENERICA" OtherKey="EPI_INT_IDTIPOENTIDAD" Type="TBL_EPI_ENTIDADTIPOENTIDAD" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDGENERICA" OtherKey="EPI_INT_IDPROCEDENCIA" Type="TBL_EPI_PRODUCTO" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_PRODUCTO1" Member="TBL_EPI_PRODUCTO1" ThisKey="EPI_INT_IDGENERICA" OtherKey="EPI_INT_IDTIPOUSO" Type="TBL_EPI_PRODUCTO" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_FACTURA" Member="TBL_EPI_FACTURA" ThisKey="EPI_INT_IDGENERICA" OtherKey="EPI_INT_IDTIPOPAGO" Type="TBL_EPI_FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_EMPLEADO" Member="TBL_EPI_EMPLEADO">
+    <Type Name="TBL_EPI_EMPLEADO">
+      <Column Name="EPI_INT_IDEMPLEADO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_CODIGO" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EPI_VCH_NOMBRE" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EPI_VCH_APELLIDOPATERNO" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EPI_VCH_APELLIDOMATERNO" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDSEXO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHANACIMIENTO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDTIPODOCUMENTOIDENTIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_NUMERODOCUMENTOIDENTIDAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDESTADOCIVIL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_DIRECCIONDOMICILIO" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDCONTINENTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDPAIS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDCIUDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDPROVINCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDDISTRITO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_TELEFONODOMICILIO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EPI_VCH_TELEFONOMOVIL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CORREOPERSONAL" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CORREOCORPORATIVO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAINGRESO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_VCH_ANEXO" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_VCH_NEXTEL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDAREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDDEPARTAMENTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDCARGO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHACESE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_VCH_IMAGEN" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_VCH_GRUPOSANGUINEO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGOAFP" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EPI_VCH_NUMEROSEGUROSOCIAL" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EPI_BIT_REMUNERACIONFIJA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_NUM_REMUNERACION" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CUENTAAHORRO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EPI_NUM_ASIGNACIONFAMILIAR" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="EPI_VCH_MODALIDADCONTRACTUAL" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_VCH_MODOSELECCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACCESOWEB" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_VCH_USUARIOWINDOWS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_EMPLEADO" Member="TBL_EPI_GENERICA" ThisKey="EPI_INT_IDSEXO" OtherKey="EPI_INT_IDGENERICA" Type="TBL_EPI_GENERICA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_EMPLEADO1" Member="TBL_EPI_GENERICA1" ThisKey="EPI_INT_IDESTADOCIVIL" OtherKey="EPI_INT_IDGENERICA" Type="TBL_EPI_GENERICA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_EMPLEADO" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_IDUSUARIO" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_TIPODOCUMENTOIDENTIDAD_TBL_EPI_EMPLEADO" Member="TBL_EPI_TIPODOCUMENTOIDENTIDAD" ThisKey="EPI_INT_IDTIPODOCUMENTOIDENTIDAD" OtherKey="EPI_INT_IDTIPODOCUMENTOIDENTIDAD" Type="TBL_EPI_TIPODOCUMENTOIDENTIDAD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_ENTIDAD" Member="TBL_EPI_ENTIDAD">
+    <Type Name="TBL_EPI_ENTIDAD">
+      <Column Name="EPI_INT_IDENTIDAD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_INT_IDTIPODOCUMENTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDTIPOPERSONA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_NUMERODOCUMENTO" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="EPI_VCH_RAZONSOCIAL" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_VCH_NOMBRECOMERCIAL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_VCH_GIRONEGOCIO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDGRUPOEMPRESARIAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_SITIOWEB" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_VCH_DIRECCION" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_INT_USUARIOCREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHACREACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_USUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAMODIFICACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="TBL_EPI_ENTIDAD_TBL_EPI_ENTIDADTIPOENTIDAD" Member="TBL_EPI_ENTIDADTIPOENTIDAD" ThisKey="EPI_INT_IDENTIDAD" OtherKey="EPI_INT_IDENTIDAD" Type="TBL_EPI_ENTIDADTIPOENTIDAD" />
+      <Association Name="TBL_EPI_ENTIDAD_TBL_EPI_FACTURA" Member="TBL_EPI_FACTURA" ThisKey="EPI_INT_IDENTIDAD" OtherKey="EPI_INT_PERSONAFACTURAIDENTIDAD" Type="TBL_EPI_FACTURA" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_ENTIDAD" Member="TBL_EPI_GENERICA" ThisKey="EPI_INT_IDTIPOPERSONA" OtherKey="EPI_INT_IDGENERICA" Type="TBL_EPI_GENERICA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_ENTIDAD" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_USUARIOCREA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_ENTIDAD1" Member="TBL_EPI_USUARIO1" ThisKey="EPI_INT_USUARIOMODIFICA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_TIPODOCUMENTOIDENTIDAD_TBL_EPI_ENTIDAD" Member="TBL_EPI_TIPODOCUMENTOIDENTIDAD" ThisKey="EPI_INT_IDTIPODOCUMENTO" OtherKey="EPI_INT_IDTIPODOCUMENTOIDENTIDAD" Type="TBL_EPI_TIPODOCUMENTOIDENTIDAD" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_ENTIDADTIPOENTIDAD" Member="TBL_EPI_ENTIDADTIPOENTIDAD">
+    <Type Name="TBL_EPI_ENTIDADTIPOENTIDAD">
+      <Column Name="EPI_INT_IDENTIDADTIPOENTIDAD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_BIT_ESTADO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_INT_IDTIPOENTIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDENTIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_USUARIOCREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHACREACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_USUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAMODIFICACION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_BIT_VISIBLE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="TBL_EPI_ENTIDAD_TBL_EPI_ENTIDADTIPOENTIDAD" Member="TBL_EPI_ENTIDAD" ThisKey="EPI_INT_IDENTIDAD" OtherKey="EPI_INT_IDENTIDAD" Type="TBL_EPI_ENTIDAD" IsForeignKey="true" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_ENTIDADTIPOENTIDAD" Member="TBL_EPI_GENERICA" ThisKey="EPI_INT_IDTIPOENTIDAD" OtherKey="EPI_INT_IDGENERICA" Type="TBL_EPI_GENERICA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_ENTIDADTIPOENTIDAD" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_USUARIOCREA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_ENTIDADTIPOENTIDAD1" Member="TBL_EPI_USUARIO1" ThisKey="EPI_INT_USUARIOMODIFICA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_TIPOEXISTENCIA" Member="TBL_EPI_TIPOEXISTENCIA">
+    <Type Name="TBL_EPI_TIPOEXISTENCIA">
+      <Column Name="EPI_INT_IDTIPOEXISTENCIA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGOSUNAT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_TIPOEXISTENCIA_TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDTIPOEXISTENCIA" OtherKey="EPI_INT_IDTIPOEXISTENCIA" Type="TBL_EPI_PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_MARCA" Member="TBL_EPI_MARCA">
+    <Type Name="TBL_EPI_MARCA">
+      <Column Name="EPI_INT_IDMARCA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_MARCA_TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDMARCA" OtherKey="EPI_INT_IDMARCA" Type="TBL_EPI_PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_MONEDA" Member="TBL_EPI_MONEDA">
+    <Type Name="TBL_EPI_MONEDA">
+      <Column Name="EPI_INT_IDMONEDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_NOMBRE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_VCH_SIMBOLO" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_VCH_SIMBOLOMONEDA" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGOSUNAT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_MONEDA_TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDMONEDA" OtherKey="EPI_INT_IDMONEDACOMPRA" Type="TBL_EPI_PRODUCTO" />
+      <Association Name="TBL_EPI_MONEDA_TBL_EPI_FACTURA" Member="TBL_EPI_FACTURA" ThisKey="EPI_INT_IDMONEDA" OtherKey="EPI_INT_IDMONEDA" Type="TBL_EPI_FACTURA" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_UNIDADMEDIDA" Member="TBL_EPI_UNIDADMEDIDA">
+    <Type Name="TBL_EPI_UNIDADMEDIDA">
+      <Column Name="EPI_INT_IDUNIDADMEDIDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGOSUNAT" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_VCH_SIMBOLO" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_UNIDADMEDIDA_TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDUNIDADMEDIDA" OtherKey="EPI_INT_IDUNIDADMEDIDA" Type="TBL_EPI_PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_IMPUESTO" Member="TBL_EPI_IMPUESTO">
+    <Type Name="TBL_EPI_IMPUESTO">
+      <Column Name="EPI_INT_IDIMPUESTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_NOMBRE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EPI_NUM_PORCENTAJE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_IMPUESTO_TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDIMPUESTO" OtherKey="EPI_INT_IDIMPUESTO" Type="TBL_EPI_PRODUCTO" />
+      <Association Name="TBL_EPI_IMPUESTO_TBL_EPI_FACTURADETALLE" Member="TBL_EPI_FACTURADETALLE" ThisKey="EPI_INT_IDIMPUESTO" OtherKey="EPI_INT_IDIMPUESTO" Type="TBL_EPI_FACTURADETALLE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_CUENTACONTABLE" Member="TBL_EPI_CUENTACONTABLE">
+    <Type Name="TBL_EPI_CUENTACONTABLE">
+      <Column Name="EPI_INT_IDCUENTACONTABLE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_NOMBRE" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_VCH_NUMEROCUENTA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Association Name="TBL_EPI_CUENTACONTABLE_TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDCUENTACONTABLE" OtherKey="EPI_INT_IDCUENTACONTABLE" Type="TBL_EPI_PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_CATEGORIA" Member="TBL_EPI_CATEGORIA">
+    <Type Name="TBL_EPI_CATEGORIA">
+      <Column Name="EPI_INT_IDCATEGORIA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_CATEGORIA_TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDCATEGORIA" OtherKey="EPI_INT_IDCATEGORIA" Type="TBL_EPI_PRODUCTO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_PRODUCTO" Member="TBL_EPI_PRODUCTO">
+    <Type Name="TBL_EPI_PRODUCTO">
+      <Column Name="EPI_INT_IDPRODUCTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_CODIGOPRODUCTO" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EPI_VCH_DESCRIPCIONDETALLADA" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EPI_VCH_COMENTARIO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGOBARRAINTERNO" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGOBARRAPROVEEDOR" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDMARCA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDTIPOEXISTENCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUNIDADMEDIDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDPROCEDENCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_NUM_STOCKMIN" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_NUM_STOCKMAX" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDMONEDACOMPRA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_NUM_PRECIOCOMPRA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_NUM_PRECIOVENTA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_NUM_SALDOSTOCK" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_NUM_SALDODISPONIBLEVENTA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_BIT_INVENTARIABLE" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_INT_IDIMPUESTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDCUENTACONTABLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDTIPOUSO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDCATEGORIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TBL_EPI_PRODUCTO_TBL_EPI_FACTURADETALLE" Member="TBL_EPI_FACTURADETALLE" ThisKey="EPI_INT_IDPRODUCTO" OtherKey="EPI_INT_IDPRODUCTO" Type="TBL_EPI_FACTURADETALLE" />
+      <Association Name="TBL_EPI_CATEGORIA_TBL_EPI_PRODUCTO" Member="TBL_EPI_CATEGORIA" ThisKey="EPI_INT_IDCATEGORIA" OtherKey="EPI_INT_IDCATEGORIA" Type="TBL_EPI_CATEGORIA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_CUENTACONTABLE_TBL_EPI_PRODUCTO" Member="TBL_EPI_CUENTACONTABLE" ThisKey="EPI_INT_IDCUENTACONTABLE" OtherKey="EPI_INT_IDCUENTACONTABLE" Type="TBL_EPI_CUENTACONTABLE" IsForeignKey="true" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_PRODUCTO" Member="TBL_EPI_GENERICA" ThisKey="EPI_INT_IDPROCEDENCIA" OtherKey="EPI_INT_IDGENERICA" Type="TBL_EPI_GENERICA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_PRODUCTO1" Member="TBL_EPI_GENERICA1" ThisKey="EPI_INT_IDTIPOUSO" OtherKey="EPI_INT_IDGENERICA" Type="TBL_EPI_GENERICA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_IMPUESTO_TBL_EPI_PRODUCTO" Member="TBL_EPI_IMPUESTO" ThisKey="EPI_INT_IDIMPUESTO" OtherKey="EPI_INT_IDIMPUESTO" Type="TBL_EPI_IMPUESTO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_MARCA_TBL_EPI_PRODUCTO" Member="TBL_EPI_MARCA" ThisKey="EPI_INT_IDMARCA" OtherKey="EPI_INT_IDMARCA" Type="TBL_EPI_MARCA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_MONEDA_TBL_EPI_PRODUCTO" Member="TBL_EPI_MONEDA" ThisKey="EPI_INT_IDMONEDACOMPRA" OtherKey="EPI_INT_IDMONEDA" Type="TBL_EPI_MONEDA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_TIPOEXISTENCIA_TBL_EPI_PRODUCTO" Member="TBL_EPI_TIPOEXISTENCIA" ThisKey="EPI_INT_IDTIPOEXISTENCIA" OtherKey="EPI_INT_IDTIPOEXISTENCIA" Type="TBL_EPI_TIPOEXISTENCIA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_UNIDADMEDIDA_TBL_EPI_PRODUCTO" Member="TBL_EPI_UNIDADMEDIDA" ThisKey="EPI_INT_IDUNIDADMEDIDA" OtherKey="EPI_INT_IDUNIDADMEDIDA" Type="TBL_EPI_UNIDADMEDIDA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_TIPODOCUMENTOIDENTIDAD" Member="TBL_EPI_TIPODOCUMENTOIDENTIDAD">
+    <Type Name="TBL_EPI_TIPODOCUMENTOIDENTIDAD">
+      <Column Name="EPI_INT_IDTIPODOCUMENTOIDENTIDAD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_DESCRIPCIONLARGA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_VCH_DESCRIPCIONCORTA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGOSUNAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_TIPODOCUMENTOIDENTIDAD_TBL_EPI_EMPLEADO" Member="TBL_EPI_EMPLEADO" ThisKey="EPI_INT_IDTIPODOCUMENTOIDENTIDAD" OtherKey="EPI_INT_IDTIPODOCUMENTOIDENTIDAD" Type="TBL_EPI_EMPLEADO" />
+      <Association Name="TBL_EPI_TIPODOCUMENTOIDENTIDAD_TBL_EPI_ENTIDAD" Member="TBL_EPI_ENTIDAD" ThisKey="EPI_INT_IDTIPODOCUMENTOIDENTIDAD" OtherKey="EPI_INT_IDTIPODOCUMENTO" Type="TBL_EPI_ENTIDAD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_TIPODOCUMENTOCONTABLE" Member="TBL_EPI_TIPODOCUMENTOCONTABLE">
+    <Type Name="TBL_EPI_TIPODOCUMENTOCONTABLE">
+      <Column Name="EPI_INT_IDTIPODOCUMENTOCONTABLE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_VCH_NOMBREDOCUMENTO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGOSUNAT" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHACREA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIOCREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAMODIFICA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_TIPODOCUMENTOCONTABLE_TBL_EPI_TIPODOCUMENTOCONTABLESERIES" Member="TBL_EPI_TIPODOCUMENTOCONTABLESERIES" ThisKey="EPI_INT_IDTIPODOCUMENTOCONTABLE" OtherKey="EPI_INT_IDTIPODOCUMENTOCONTABLE" Type="TBL_EPI_TIPODOCUMENTOCONTABLESERIES" />
+      <Association Name="TBL_EPI_TIPODOCUMENTOCONTABLE_TBL_EPI_FACTURA" Member="TBL_EPI_FACTURA" ThisKey="EPI_INT_IDTIPODOCUMENTOCONTABLE" OtherKey="EPI_INT_IDTIPODOCUMENTOCONTABLE" Type="TBL_EPI_FACTURA" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLE" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_IDUSUARIOCREA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLE1" Member="TBL_EPI_USUARIO1" ThisKey="EPI_INT_IDUSUARIOMODIFICA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_TIPODOCUMENTOCONTABLESERIES" Member="TBL_EPI_TIPODOCUMENTOCONTABLESERIES">
+    <Type Name="TBL_EPI_TIPODOCUMENTOCONTABLESERIES">
+      <Column Name="EPI_INT_IDTIPODOCUMENTOCONTABLESERIES" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_INT_IDTIPODOCUMENTOCONTABLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_SERIE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="EPI_INT_CORRELATIVO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_BIT_PREFERIDA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIOCREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHACREA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAMODIFICA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_TIPODOCUMENTOCONTABLE_TBL_EPI_TIPODOCUMENTOCONTABLESERIES" Member="TBL_EPI_TIPODOCUMENTOCONTABLE" ThisKey="EPI_INT_IDTIPODOCUMENTOCONTABLE" OtherKey="EPI_INT_IDTIPODOCUMENTOCONTABLE" Type="TBL_EPI_TIPODOCUMENTOCONTABLE" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLESERIES" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_IDUSUARIOCREA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLESERIES1" Member="TBL_EPI_USUARIO1" ThisKey="EPI_INT_IDUSUARIOCREA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_TIPODOCUMENTOCONTABLESERIES2" Member="TBL_EPI_USUARIO2" ThisKey="EPI_INT_IDUSUARIOMODIFICA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_FACTURADETALLE" Member="TBL_EPI_FACTURADETALLE">
+    <Type Name="TBL_EPI_FACTURADETALLE">
+      <Column Name="EPI_NUM_IDFACTURADETALLE" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_NUM_IDFACTURA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="EPI_INT_ITEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDPRODUCTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_NUM_CANTIDAD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDIMPUESTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_NUM_VALORUNITARIO" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_SUBTOTAL" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_IGVVENTA" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_IMPORTETOTAL" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TBL_EPI_IMPUESTO_TBL_EPI_FACTURADETALLE" Member="TBL_EPI_IMPUESTO" ThisKey="EPI_INT_IDIMPUESTO" OtherKey="EPI_INT_IDIMPUESTO" Type="TBL_EPI_IMPUESTO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_PRODUCTO_TBL_EPI_FACTURADETALLE" Member="TBL_EPI_PRODUCTO" ThisKey="EPI_INT_IDPRODUCTO" OtherKey="EPI_INT_IDPRODUCTO" Type="TBL_EPI_PRODUCTO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_FACTURA_TBL_EPI_FACTURADETALLE" Member="TBL_EPI_FACTURA" ThisKey="EPI_NUM_IDFACTURA" OtherKey="EPI_NUM_IDFACTURA" Type="TBL_EPI_FACTURA" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_FACTURA" Member="TBL_EPI_FACTURA">
+    <Type Name="TBL_EPI_FACTURA">
+      <Column Name="EPI_NUM_IDFACTURA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_INT_IDTIPODOCUMENTOCONTABLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_SERIEFACTURA" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="EPI_VCH_NUMERODOCUMENTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHADESDE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAHASTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_NUM_BASEIPONIBLE" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_BASEEXPONERADO" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_IMPUESTO" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_IMPORTETOTAL" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_BIT_IMPRESA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_BIT_ANULADA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_VCH_REFERENCIA1" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_VCH_REFERENCIA2" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHACREA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIOCREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAMODIFICA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUSUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_OBSERVACIONES" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAIMPRESION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHAREIMMPRESION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDMONEDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_NUM_TIPOVENTA" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="EPI_INT_PERSONAFACTURAIDENTIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_VCH_CODIGORESPUESTASUNAT" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDTIPOPAGO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_TOTALENLETRAS" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="TBL_EPI_FACTURA_TBL_EPI_FACTURADETALLE" Member="TBL_EPI_FACTURADETALLE" ThisKey="EPI_NUM_IDFACTURA" OtherKey="EPI_NUM_IDFACTURA" Type="TBL_EPI_FACTURADETALLE" />
+      <Association Name="TBL_EPI_ENTIDAD_TBL_EPI_FACTURA" Member="TBL_EPI_ENTIDAD" ThisKey="EPI_INT_PERSONAFACTURAIDENTIDAD" OtherKey="EPI_INT_IDENTIDAD" Type="TBL_EPI_ENTIDAD" IsForeignKey="true" />
+      <Association Name="TBL_EPI_GENERICA_TBL_EPI_FACTURA" Member="TBL_EPI_GENERICA" ThisKey="EPI_INT_IDTIPOPAGO" OtherKey="EPI_INT_IDGENERICA" Type="TBL_EPI_GENERICA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_MONEDA_TBL_EPI_FACTURA" Member="TBL_EPI_MONEDA" ThisKey="EPI_INT_IDMONEDA" OtherKey="EPI_INT_IDMONEDA" Type="TBL_EPI_MONEDA" IsForeignKey="true" />
+      <Association Name="TBL_EPI_TIPODOCUMENTOCONTABLE_TBL_EPI_FACTURA" Member="TBL_EPI_TIPODOCUMENTOCONTABLE" ThisKey="EPI_INT_IDTIPODOCUMENTOCONTABLE" OtherKey="EPI_INT_IDTIPODOCUMENTOCONTABLE" Type="TBL_EPI_TIPODOCUMENTOCONTABLE" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_FACTURA" Member="TBL_EPI_USUARIO" ThisKey="EPI_INT_IDUSUARIOCREA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_USUARIO_TBL_EPI_FACTURA1" Member="TBL_EPI_USUARIO1" ThisKey="EPI_INT_IDUSUARIOMODIFICA" OtherKey="EPI_INT_IDUSUARIO" Type="TBL_EPI_USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_EPI_OPCIONMODULO" Member="TBL_EPI_OPCIONMODULO">
+    <Type Name="TBL_EPI_OPCIONMODULO">
+      <Column Name="EPI_INT_IDOPCIONMODULO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_INT_IDOPCION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDMODULO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_BIT_ESRIBBON" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EPI_INT_ORDEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TBL_EPI_OPCIONMODULO_TBL_EPI_OPCIONMODULOPERFIL" Member="TBL_EPI_OPCIONMODULOPERFIL" ThisKey="EPI_INT_IDOPCIONMODULO" OtherKey="EPI_INT_IDOPCIONMODULO" Type="TBL_EPI_OPCIONMODULOPERFIL" />
+      <Association Name="TBL_EPI_MODULO_TBL_EPI_OPCIONMODULO" Member="TBL_EPI_MODULO" ThisKey="EPI_INT_IDMODULO" OtherKey="EPI_INT_IDMODULO" Type="TBL_EPI_MODULO" IsForeignKey="true" />
+      <Association Name="TBL_EPI_OPCION_TBL_EPI_OPCIONMODULO" Member="TBL_EPI_OPCION" ThisKey="EPI_INT_IDOPCION" OtherKey="EPI_INT_IDOPCION" Type="TBL_EPI_OPCION" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.EPI_SP_MODULO" Method="EPI_SP_MODULO">
+    <ElementType Name="EPI_SP_MODULOResult">
+      <Column Name="EPI_INT_IDMODULO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EPI_VCH_NOMBREMODULO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EPI_INT_ORDEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_PAGINA" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.EPI_SP_LISTAENTIDADPORTIPO" Method="EPI_SP_LISTAENTIDADPORTIPO">
+    <Parameter Name="IDENTIDAD" Parameter="iDENTIDAD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TIPOENTIDAD1" Parameter="tIPOENTIDAD1" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TIPOENTIDAD2" Parameter="tIPOENTIDAD2" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TIPOENTIDAD3" Parameter="tIPOENTIDAD3" Type="System.Int32" DbType="Int" />
+    <ElementType Name="EPI_SP_LISTAENTIDADPORTIPOResult">
+      <Column Name="EPI_INT_IDENTIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_NUMERODOCUMENTO" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="EPI_VCH_RAZONSOCIAL1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_VCH_RAZONSOCIAL2" Type="System.String" DbType="VarChar(243)" CanBeNull="true" />
+      <Column Name="EPI_VCH_DIRECCION" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.EPI_SP_LISTAFACTURA" Method="EPI_SP_LISTAFACTURA">
+    <Parameter Name="IDTIPODOCUMENTOCONTABLE" Parameter="iDTIPODOCUMENTOCONTABLE" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IDCLIENTE" Parameter="iDCLIENTE" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SERIE" Parameter="sERIE" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="CRITERIO" Parameter="cRITERIO" Type="System.String" DbType="VarChar(300)" />
+    <Parameter Name="FECHADESDE" Parameter="fECHADESDE" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="FECHAHASTA" Parameter="fECHAHASTA" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="EPI_SP_LISTAFACTURAResult">
+      <Column Name="EPI_NUM_IDFACTURA" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="EPI_INT_IDTIPODOCUMENTOCONTABLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_NOMBREDOCUMENTO" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_VCH_SERIEFACTURA" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="EPI_VCH_NUMERODOCUMENTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EPI_VCH_ESTADO" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="EPI_VCH_RUC" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="EPI_VCH_RAZONSOCIAL" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="EPI_DAT_FECHADESDE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EPI_INT_IDMONEDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_MONEDA" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_BASEIPONIBLE" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_IMPUESTO" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_IMPORTETOTAL" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.EPI_SP_LISTARFACTURAEDICION" Method="EPI_SP_LISTARFACTURAEDICION">
+    <Parameter Name="IDFACTURA" Parameter="iDFACTURA" Type="System.Int32" DbType="Int" />
+    <ElementType Name="EPI_SP_LISTARFACTURAEDICIONResult">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IDFACTURA" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="IDTIPODOCUMENTOCONTABLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SERIEFACTURA" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="NUMERODOCUMENTO" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FECHADESDE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHAHASTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDMONEDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDTIPOPAGO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERSONAFACTURAIDENTIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PERSONAFACTURARAZONSOCIAL" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PERSONAFACTURADIRECCION" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="PERSONAFACTURANUMERODOCUMENTO" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="OBSERVACIONES" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="REFERENCIA1" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="REFERENCIA2" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="BASEIPONIBLE" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="BASEEXPONERADO" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="IMPUESTO" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="IMPORTETOTAL" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="BIT_IMPRESA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BIT_ANULADA" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FECHACREA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDUSUARIOCREA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHAMODIFICA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IDUSUARIOMODIFICA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHAIMPRESION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHAREIMMPRESION" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TIPOVENTA" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CODIGORESPUESTASUNAT" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="TOTALENLETRAS" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID1" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EPI_NUM_IDFACTURADETALLE" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="EPI_INT_ITEM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_INT_IDPRODUCTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_NUM_CANTIDAD" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPI_VCH_DESCRIPCION" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDUNIDADMEDIDA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_VCH_UNIDADMEDIDA" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EPI_INT_IDIMPUESTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPI_NUM_VALORUNITARIO" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_SUBTOTAL" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_IGVVENTA" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_NUM_IMPORTETOTAL" Type="System.Decimal" DbType="Decimal(18,5)" CanBeNull="true" />
+      <Column Name="EPI_BIT_ACTIVO" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
