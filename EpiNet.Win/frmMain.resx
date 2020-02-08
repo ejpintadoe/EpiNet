@@ -173,6 +173,12 @@
         J+0x6AAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="barButtonItem9.Caption" xml:space="preserve">
+    <value>Cuenta</value>
+  </data>
+  <data name="barButtonItem10.Caption" xml:space="preserve">
+    <value>Cerrar Cesion</value>
+  </data>
   <assembly alias="DevExpress.Utils.v17.2" name="DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="barSubItem3.SuperTip" type="DevExpress.Utils.SuperToolTip, DevExpress.Utils.v17.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -200,12 +206,6 @@
         AAAL
 </value>
   </data>
-  <data name="barButtonItem9.Caption" xml:space="preserve">
-    <value>Cuenta</value>
-  </data>
-  <data name="barButtonItem10.Caption" xml:space="preserve">
-    <value>Cerrar Cesion</value>
-  </data>
   <data name="barLinkContainerItem1.Caption" xml:space="preserve">
     <value>Usuario</value>
   </data>
@@ -227,9 +227,6 @@
   <data name="barLinkContainerItem3.Caption" xml:space="preserve">
     <value>barLinkContainerItem3</value>
   </data>
-  <data name="barLinkContainerItem4.Caption" xml:space="preserve">
-    <value>barLinkContainerItem4</value>
-  </data>
   <data name="barHeaderItem1.Caption" xml:space="preserve">
     <value>barHeaderItem1</value>
   </data>
@@ -245,11 +242,48 @@
   <data name="barSubItem4.Caption" xml:space="preserve">
     <value>barSubItem4</value>
   </data>
+  <data name="barLinkContainerItem4.Caption" xml:space="preserve">
+    <value>barLinkContainerItem4</value>
+  </data>
   <data name="barLinkContainerItem7.Caption" xml:space="preserve">
     <value>Usuarioss</value>
   </data>
   <data name="barSubItem5.Caption" xml:space="preserve">
     <value>barSubItem5</value>
+  </data>
+  <data name="barEditItem1.Caption" xml:space="preserve">
+    <value>barEditItem1</value>
+  </data>
+  <data name="barEditItem2.Caption" xml:space="preserve">
+    <value>barEditItem2</value>
+  </data>
+  <data name="barEditItem3.Caption" xml:space="preserve">
+    <value>barEditItem3</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="repositoryItemImageEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="repositoryItemImageEdit1.Buttons" type="DevExpress.XtraEditors.Controls.ButtonPredefines, DevExpress.Utils.v17.2">
+    <value>Combo</value>
+  </data>
+  <data name="barButtonItem11.Caption" xml:space="preserve">
+    <value>barButtonItem11</value>
+  </data>
+  <data name="barStaticItem1.Caption" xml:space="preserve">
+    <value>barStaticItem1</value>
+  </data>
+  <data name="barButtonItem12.Caption" xml:space="preserve">
+    <value>barButtonItem12</value>
+  </data>
+  <data name="barLinkContainerItem8.Caption" xml:space="preserve">
+    <value>barLinkContainerItem8</value>
+  </data>
+  <data name="barCheckItem2.Caption" xml:space="preserve">
+    <value>barCheckItem2</value>
+  </data>
+  <data name="barDockingMenuItem3.Caption" xml:space="preserve">
+    <value>barDockingMenuItem3</value>
   </data>
   <metadata name="imageCollection32x32.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>379, 17</value>
@@ -271,8 +305,14 @@
   <data name="ribbonControlMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="ribbonPageGroup1.Text" xml:space="preserve">
+    <value>ribbonPageGroup1</value>
+  </data>
   <data name="ribbonPage1.Text" xml:space="preserve">
     <value>INICIO</value>
+  </data>
+  <data name="ribbonPageGroup2.Text" xml:space="preserve">
+    <value>ribbonPageGroup2</value>
   </data>
   <data name="ribbonPage2.Text" xml:space="preserve">
     <value>VIEW</value>
@@ -310,26 +350,19 @@
   <data name="&gt;&gt;ribbonControlMain.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="ribbonPageGroup1.Text" xml:space="preserve">
-    <value>ribbonPageGroup1</value>
-  </data>
-  <data name="ribbonPageGroup2.Text" xml:space="preserve">
-    <value>ribbonPageGroup2</value>
-  </data>
   <data name="navBarGroup1.Caption" xml:space="preserve">
     <value>Dashboard</value>
+  </data>
+  <data name="navBarItem1.Caption" xml:space="preserve">
+    <value>navBarItem1</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="navBarControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
-  <data name="navBarItem1.Caption" xml:space="preserve">
-    <value>navBarItem1</value>
-  </data>
   <data name="navBarControlMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 143</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="resource.ExpandedWidth" type="System.Int32, mscorlib">
     <value>169</value>
   </data>
@@ -605,6 +638,78 @@
   </data>
   <data name="&gt;&gt;imageCollection16x16.Type" xml:space="preserve">
     <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem1.Name" xml:space="preserve">
+    <value>barEditItem1</value>
+  </data>
+  <data name="&gt;&gt;barEditItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHypertextLabel1.Name" xml:space="preserve">
+    <value>repositoryItemHypertextLabel1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHypertextLabel1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel, DevExpress.XtraEditors.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem2.Name" xml:space="preserve">
+    <value>barEditItem2</value>
+  </data>
+  <data name="&gt;&gt;barEditItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHypertextLabel2.Name" xml:space="preserve">
+    <value>repositoryItemHypertextLabel2</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemHypertextLabel2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel, DevExpress.XtraEditors.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barEditItem3.Name" xml:space="preserve">
+    <value>barEditItem3</value>
+  </data>
+  <data name="&gt;&gt;barEditItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarEditItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemImageEdit1.Name" xml:space="preserve">
+    <value>repositoryItemImageEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemImageEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemImageEdit, DevExpress.XtraEditors.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem11.Name" xml:space="preserve">
+    <value>barButtonItem11</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem11.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barStaticItem1.Name" xml:space="preserve">
+    <value>barStaticItem1</value>
+  </data>
+  <data name="&gt;&gt;barStaticItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem12.Name" xml:space="preserve">
+    <value>barButtonItem12</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem12.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barLinkContainerItem8.Name" xml:space="preserve">
+    <value>barLinkContainerItem8</value>
+  </data>
+  <data name="&gt;&gt;barLinkContainerItem8.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarLinkContainerItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barCheckItem2.Name" xml:space="preserve">
+    <value>barCheckItem2</value>
+  </data>
+  <data name="&gt;&gt;barCheckItem2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarCheckItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barDockingMenuItem3.Name" xml:space="preserve">
+    <value>barDockingMenuItem3</value>
+  </data>
+  <data name="&gt;&gt;barDockingMenuItem3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarDockingMenuItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>

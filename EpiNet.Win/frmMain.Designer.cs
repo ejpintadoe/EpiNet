@@ -72,16 +72,32 @@
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.imageCollection16x16 = new DevExpress.Utils.ImageCollection(this.components);
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
+            this.barEditItem2 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemHypertextLabel2 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
+            this.barEditItem3 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
+            this.barLinkContainerItem8 = new DevExpress.XtraBars.BarLinkContainerItem();
+            this.barCheckItem2 = new DevExpress.XtraBars.BarCheckItem();
+            this.barDockingMenuItem3 = new DevExpress.XtraBars.BarDockingMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection32x32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection16x16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControlMain
             // 
             this.ribbonControlMain.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Teal;
+            this.ribbonControlMain.ExpandCollapseItem.CloseRadialMenuOnItemClick = true;
             this.ribbonControlMain.ExpandCollapseItem.Id = 0;
             this.ribbonControlMain.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControlMain.ExpandCollapseItem,
@@ -114,14 +130,27 @@
             this.barDockingMenuItem2,
             this.barSubItem4,
             this.barLinkContainerItem7,
-            this.barSubItem5});
+            this.barSubItem5,
+            this.barEditItem1,
+            this.barEditItem2,
+            this.barEditItem3,
+            this.barButtonItem11,
+            this.barStaticItem1,
+            this.barButtonItem12,
+            this.barLinkContainerItem8,
+            this.barCheckItem2,
+            this.barDockingMenuItem3});
             this.ribbonControlMain.LargeImages = this.imageCollection32x32;
             resources.ApplyResources(this.ribbonControlMain, "ribbonControlMain");
-            this.ribbonControlMain.MaxItemId = 11;
+            this.ribbonControlMain.MaxItemId = 20;
             this.ribbonControlMain.Name = "ribbonControlMain";
             this.ribbonControlMain.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2});
+            this.ribbonControlMain.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemHypertextLabel1,
+            this.repositoryItemHypertextLabel2,
+            this.repositoryItemImageEdit1});
             this.ribbonControlMain.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControlMain.StatusBar = this.ribbonStatusBar;
             this.ribbonControlMain.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
@@ -498,6 +527,80 @@
             this.imageCollection16x16.InsertGalleryImage("meeting_16x16.png", "devav/view/meeting_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("devav/view/meeting_16x16.png"), 13);
             this.imageCollection16x16.Images.SetKeyName(13, "meeting_16x16.png");
             // 
+            // barEditItem1
+            // 
+            resources.ApplyResources(this.barEditItem1, "barEditItem1");
+            this.barEditItem1.Edit = this.repositoryItemHypertextLabel1;
+            this.barEditItem1.Id = 11;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemHypertextLabel1
+            // 
+            this.repositoryItemHypertextLabel1.Name = "repositoryItemHypertextLabel1";
+            // 
+            // barEditItem2
+            // 
+            resources.ApplyResources(this.barEditItem2, "barEditItem2");
+            this.barEditItem2.Edit = this.repositoryItemHypertextLabel2;
+            this.barEditItem2.Id = 12;
+            this.barEditItem2.Name = "barEditItem2";
+            // 
+            // repositoryItemHypertextLabel2
+            // 
+            this.repositoryItemHypertextLabel2.Name = "repositoryItemHypertextLabel2";
+            // 
+            // barEditItem3
+            // 
+            resources.ApplyResources(this.barEditItem3, "barEditItem3");
+            this.barEditItem3.Edit = this.repositoryItemImageEdit1;
+            this.barEditItem3.Id = 13;
+            this.barEditItem3.Name = "barEditItem3";
+            // 
+            // repositoryItemImageEdit1
+            // 
+            resources.ApplyResources(this.repositoryItemImageEdit1, "repositoryItemImageEdit1");
+            this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(((DevExpress.XtraEditors.Controls.ButtonPredefines)(resources.GetObject("repositoryItemImageEdit1.Buttons"))))});
+            this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            // 
+            // barButtonItem11
+            // 
+            resources.ApplyResources(this.barButtonItem11, "barButtonItem11");
+            this.barButtonItem11.Id = 14;
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu;
+            // 
+            // barStaticItem1
+            // 
+            resources.ApplyResources(this.barStaticItem1, "barStaticItem1");
+            this.barStaticItem1.Id = 15;
+            this.barStaticItem1.Name = "barStaticItem1";
+            // 
+            // barButtonItem12
+            // 
+            resources.ApplyResources(this.barButtonItem12, "barButtonItem12");
+            this.barButtonItem12.Id = 16;
+            this.barButtonItem12.Name = "barButtonItem12";
+            // 
+            // barLinkContainerItem8
+            // 
+            resources.ApplyResources(this.barLinkContainerItem8, "barLinkContainerItem8");
+            this.barLinkContainerItem8.Id = 17;
+            this.barLinkContainerItem8.Name = "barLinkContainerItem8";
+            this.barLinkContainerItem8.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barCheckItem2
+            // 
+            resources.ApplyResources(this.barCheckItem2, "barCheckItem2");
+            this.barCheckItem2.Id = 18;
+            this.barCheckItem2.Name = "barCheckItem2";
+            // 
+            // barDockingMenuItem3
+            // 
+            resources.ApplyResources(this.barDockingMenuItem3, "barDockingMenuItem3");
+            this.barDockingMenuItem3.Id = 19;
+            this.barDockingMenuItem3.Name = "barDockingMenuItem3";
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -517,6 +620,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection16x16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,5 +672,17 @@
         private DevExpress.XtraBars.BarLinkContainerItem barLinkContainerItem4;
         private DevExpress.XtraBars.BarLinkContainerItem barLinkContainerItem7;
         private DevExpress.XtraBars.BarSubItem barSubItem5;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
+        private DevExpress.XtraBars.BarEditItem barEditItem2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel2;
+        private DevExpress.XtraBars.BarEditItem barEditItem3;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarStaticItem barStaticItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.BarLinkContainerItem barLinkContainerItem8;
+        private DevExpress.XtraBars.BarCheckItem barCheckItem2;
+        private DevExpress.XtraBars.BarDockingMenuItem barDockingMenuItem3;
     }
 }

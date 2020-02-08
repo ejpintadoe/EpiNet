@@ -36,6 +36,7 @@ namespace EpiNet.Win
 
         public frmMain()
         {
+            //TEST
             InitializeComponent();
             InitSkinGallery();
             oUsuario = BaseForm.VariablesGlobales.MiUsuario;
