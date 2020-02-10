@@ -359,38 +359,14 @@
   <data name="colName.Caption" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="repositoryItemButtonEdit1.AutoHeight" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="colName.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="colName.VisibleIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="treeListColumn2.Caption" xml:space="preserve">
-    <value>treeListColumn2</value>
-  </data>
-  <data name="treeListColumn2.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="treeListColumn2.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="treeListColumn3.Caption" xml:space="preserve">
-    <value>treeListColumn3</value>
-  </data>
-  <data name="treeListColumn3.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="treeListColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="treeListColumn4.Caption" xml:space="preserve">
-    <value>treeListColumn4</value>
-  </data>
-  <data name="treeListColumn4.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="treeListColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="treeList1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -774,6 +750,42 @@
   <data name="&gt;&gt;navBarGroup1.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;colName.Name" xml:space="preserve">
+    <value>colName</value>
+  </data>
+  <data name="&gt;&gt;colName.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemButtonEdit1.Name" xml:space="preserve">
+    <value>repositoryItemButtonEdit1</value>
+  </data>
+  <data name="&gt;&gt;repositoryItemButtonEdit1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colType.Name" xml:space="preserve">
+    <value>colType</value>
+  </data>
+  <data name="&gt;&gt;colType.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colFolder.Name" xml:space="preserve">
+    <value>colFolder</value>
+  </data>
+  <data name="&gt;&gt;colFolder.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colImageIndex.Name" xml:space="preserve">
+    <value>colImageIndex</value>
+  </data>
+  <data name="&gt;&gt;colImageIndex.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colData.Name" xml:space="preserve">
+    <value>colData</value>
+  </data>
+  <data name="&gt;&gt;colData.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;navBarItem1.Name" xml:space="preserve">
     <value>navBarItem1</value>
   </data>
@@ -791,30 +803,6 @@
   </data>
   <data name="&gt;&gt;imageCollection16x16.Type" xml:space="preserve">
     <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colName.Name" xml:space="preserve">
-    <value>colName</value>
-  </data>
-  <data name="&gt;&gt;colName.Type" xml:space="preserve">
-    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;treeListColumn2.Name" xml:space="preserve">
-    <value>treeListColumn2</value>
-  </data>
-  <data name="&gt;&gt;treeListColumn2.Type" xml:space="preserve">
-    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;treeListColumn3.Name" xml:space="preserve">
-    <value>treeListColumn3</value>
-  </data>
-  <data name="&gt;&gt;treeListColumn3.Type" xml:space="preserve">
-    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;treeListColumn4.Name" xml:space="preserve">
-    <value>treeListColumn4</value>
-  </data>
-  <data name="&gt;&gt;treeListColumn4.Type" xml:space="preserve">
-    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>

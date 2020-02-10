@@ -81,15 +81,17 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.navBarControlMain = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
-            this.imageCollection16x16 = new DevExpress.Utils.ImageCollection(this.components);
             this.navBarGroupControlContainer1 = new DevExpress.XtraNavBar.NavBarGroupControlContainer();
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.colName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.treeListColumn2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.treeListColumn3 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.treeListColumn4 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colType = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colFolder = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colImageIndex = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.colData = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.imageCollection16x16 = new DevExpress.Utils.ImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).BeginInit();
@@ -97,10 +99,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection32x32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlMain)).BeginInit();
             this.navBarControlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection16x16)).BeginInit();
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection16x16)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControlMain
@@ -572,6 +575,69 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1)});
             this.navBarGroup1.Name = "navBarGroup1";
             // 
+            // navBarGroupControlContainer1
+            // 
+            this.navBarGroupControlContainer1.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("navBarGroupControlContainer1.Appearance.BackColor")));
+            this.navBarGroupControlContainer1.Appearance.Options.UseBackColor = true;
+            this.navBarGroupControlContainer1.Controls.Add(this.treeList1);
+            this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
+            resources.ApplyResources(this.navBarGroupControlContainer1, "navBarGroupControlContainer1");
+            // 
+            // treeList1
+            // 
+            this.treeList1.AllowDrop = true;
+            this.treeList1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
+            this.colName,
+            this.colType,
+            this.colFolder,
+            this.colImageIndex,
+            this.colData});
+            this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.treeList1, "treeList1");
+            this.treeList1.Name = "treeList1";
+            this.treeList1.OptionsBehavior.Editable = false;
+            this.treeList1.OptionsView.ShowColumns = false;
+            this.treeList1.OptionsView.ShowHorzLines = false;
+            this.treeList1.OptionsView.ShowIndentAsRowStyle = true;
+            this.treeList1.OptionsView.ShowIndicator = false;
+            this.treeList1.OptionsView.ShowVertLines = false;
+            this.treeList1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemButtonEdit1});
+            // 
+            // colName
+            // 
+            resources.ApplyResources(this.colName, "colName");
+            this.colName.ColumnEdit = this.repositoryItemButtonEdit1;
+            this.colName.FieldName = "Name";
+            this.colName.Name = "colName";
+            this.colName.OptionsColumn.AllowFocus = false;
+            // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.True;
+            resources.ApplyResources(this.repositoryItemButtonEdit1, "repositoryItemButtonEdit1");
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            // 
+            // colType
+            // 
+            this.colType.Name = "colType";
+            // 
+            // colFolder
+            // 
+            this.colFolder.Name = "colFolder";
+            // 
+            // colImageIndex
+            // 
+            this.colImageIndex.FieldName = "ImageIndex";
+            this.colImageIndex.Name = "colImageIndex";
+            // 
+            // colData
+            // 
+            this.colData.FieldName = "colData";
+            this.colData.Name = "colData";
+            // 
             // navBarItem1
             // 
             resources.ApplyResources(this.navBarItem1, "navBarItem1");
@@ -614,50 +680,6 @@
             this.imageCollection16x16.InsertGalleryImage("meeting_16x16.png", "devav/view/meeting_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("devav/view/meeting_16x16.png"), 13);
             this.imageCollection16x16.Images.SetKeyName(13, "meeting_16x16.png");
             // 
-            // navBarGroupControlContainer1
-            // 
-            this.navBarGroupControlContainer1.Appearance.BackColor = ((System.Drawing.Color)(resources.GetObject("navBarGroupControlContainer1.Appearance.BackColor")));
-            this.navBarGroupControlContainer1.Appearance.Options.UseBackColor = true;
-            this.navBarGroupControlContainer1.Controls.Add(this.treeList1);
-            this.navBarGroupControlContainer1.Name = "navBarGroupControlContainer1";
-            resources.ApplyResources(this.navBarGroupControlContainer1, "navBarGroupControlContainer1");
-            // 
-            // treeList1
-            // 
-            this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.colName,
-            this.treeListColumn2,
-            this.treeListColumn3,
-            this.treeListColumn4});
-            this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.treeList1, "treeList1");
-            this.treeList1.Name = "treeList1";
-            this.treeList1.OptionsBehavior.Editable = false;
-            // 
-            // colName
-            // 
-            resources.ApplyResources(this.colName, "colName");
-            this.colName.FieldName = "Name";
-            this.colName.Name = "colName";
-            // 
-            // treeListColumn2
-            // 
-            resources.ApplyResources(this.treeListColumn2, "treeListColumn2");
-            this.treeListColumn2.FieldName = "treeListColumn2";
-            this.treeListColumn2.Name = "treeListColumn2";
-            // 
-            // treeListColumn3
-            // 
-            resources.ApplyResources(this.treeListColumn3, "treeListColumn3");
-            this.treeListColumn3.FieldName = "treeListColumn3";
-            this.treeListColumn3.Name = "treeListColumn3";
-            // 
-            // treeListColumn4
-            // 
-            resources.ApplyResources(this.treeListColumn4, "treeListColumn4");
-            this.treeListColumn4.FieldName = "treeListColumn4";
-            this.treeListColumn4.Name = "treeListColumn4";
-            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -679,10 +701,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection32x32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControlMain)).EndInit();
             this.navBarControlMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCollection16x16)).EndInit();
             this.navBarGroupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection16x16)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -747,8 +770,10 @@
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
         private DevExpress.XtraTreeList.TreeList treeList1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colName;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn3;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn4;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colType;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colFolder;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colImageIndex;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colData;
     }
 }

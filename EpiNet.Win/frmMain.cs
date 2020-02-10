@@ -46,7 +46,13 @@ namespace EpiNet.Win
                 DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(oUsuario.Usuario.EPI_VCH_SKINGALLERY);
 
             modulesNavigator = new ModulesNavigator(ribbonControlMain, xtraTabbedMdiManager1);
-                             
+
+
+            TreeListNode tlAnnouncements = treeList1.AppendNode(new object[] { Properties.Resources.Announcements, MailType.Inbox, MailFolder.Announcements, 5 }, null);
+            treeList1.AppendNode(new object[] { Properties.Resources.Inbox, MailType.Inbox, MailFolder.Announcements }, tlAnnouncements);
+            treeList1.AppendNode(new object[] { Properties.Resources.SentItems, MailType.Sent, MailFolder.Announcements, 1 }, tlAnnouncements);
+
+
             this.GeneraMenu(oUsuario.Modulos.OrderBy(x => x.EPI_INT_ORDEN).ToList());
             
         }
