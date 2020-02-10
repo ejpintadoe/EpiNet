@@ -20,6 +20,9 @@ namespace EpiNet.Win
         Deleted = 32,
         Custom = 1024
     };
+
+    public enum MailType { Inbox, Deleted, Sent, Draft };
+
     public enum eOpciones
     {
         Nuevo = 1,

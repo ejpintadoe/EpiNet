@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using EpiNet.Win.Forms;
 using EpiNet.Win.Modules;
 using DevExpress.XtraTabbedMdi;
-
+using DevExpress.XtraTreeList;
+using DevExpress.XtraTreeList.Nodes;
 
 namespace EpiNet.Win
 {
@@ -19,11 +20,25 @@ namespace EpiNet.Win
         public Form1()
         {
             InitializeComponent();
+            InitData();
 
             ribbonPage1.Visible = false;
             ribbonPage2.Visible = false;
 
        
+        }
+        private void InitData()
+        {
+            TreeListNode tlAnnouncements = treeList1.AppendNode(new object[] { Properties.Resources.Announcements, MailType.Inbox, MailFolder.Announcements, 5 }, null);
+            tlAnnouncements.Tag = "prueba";
+            treeList1.AppendNode(new object[] { Properties.Resources.Inbox, MailType.Inbox, MailFolder.Announcements }, tlAnnouncements);
+            treeList1.AppendNode(new object[] { Properties.Resources.SentItems, MailType.Sent, MailFolder.Announcements, 1 }, tlAnnouncements);
+
+
+            treeList1.ExpandAll();
+            //if (!DesignTimeTools.IsDesignMode)
+            //    CreateMessagesList(treeList1.Nodes);
+            //allowDataSourceChanged = true;
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -104,6 +119,31 @@ namespace EpiNet.Win
             frmMailEdit sfrom = new frmMailEdit();
             sfrom.MdiParent = this;
             sfrom.Show();
+        }
+
+        private void treeList1_ShownEditor(object sender, EventArgs e)
+        {
+            TreeList treeList = (TreeList)sender;
+            string aa = "";
+            for (int i = 0; i < treeList.Nodes.Count; i++)
+            {
+                aa = (string)treeList.Nodes[i].Tag;
+            }
+
+
+          
+
+            
+        }
+
+        private void treeList1_ColumnButtonClick(object sender, EventArgs e)
+        {
+            string aa = "";
+        }
+
+        private void treeList1_FocusedNodeChanged(object sender, FocusedNodeChangedEventArgs e)
+        {
+            string aa = (string)e.Node.Tag;
         }
     }
 }

@@ -61,6 +61,15 @@ namespace EpiNet.Win.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Announcements.
+        /// </summary>
+        internal static string Announcements {
+            get {
+                return ResourceManager.GetString("Announcements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cancel_16x16 {
@@ -77,6 +86,15 @@ namespace EpiNet.Win.Properties {
             get {
                 object obj = ResourceManager.GetObject("Card_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inbox.
+        /// </summary>
+        internal static string Inbox {
+            get {
+                return ResourceManager.GetString("Inbox", resourceCulture);
             }
         }
         
@@ -117,6 +135,15 @@ namespace EpiNet.Win.Properties {
             get {
                 object obj = ResourceManager.GetObject("Seguridad_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SentItems.
+        /// </summary>
+        internal static string SentItems {
+            get {
+                return ResourceManager.GetString("SentItems", resourceCulture);
             }
         }
         

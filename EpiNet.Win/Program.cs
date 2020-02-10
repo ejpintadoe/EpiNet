@@ -30,7 +30,7 @@ namespace EpiNet.Win
             
             //DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Office 2010 Silver");
             //UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new frmLogin());
+            Application.Run(new Form1());
         }
     }
 }

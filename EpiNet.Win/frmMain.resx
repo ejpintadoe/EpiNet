@@ -353,10 +353,91 @@
   <data name="navBarGroup1.Caption" xml:space="preserve">
     <value>Dashboard</value>
   </data>
+  <data name="navBarGroupControlContainer1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Control</value>
+  </data>
+  <data name="colName.Caption" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="colName.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="colName.VisibleIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="treeListColumn2.Caption" xml:space="preserve">
+    <value>treeListColumn2</value>
+  </data>
+  <data name="treeListColumn2.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="treeListColumn2.VisibleIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="treeListColumn3.Caption" xml:space="preserve">
+    <value>treeListColumn3</value>
+  </data>
+  <data name="treeListColumn3.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="treeListColumn3.VisibleIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="treeListColumn4.Caption" xml:space="preserve">
+    <value>treeListColumn4</value>
+  </data>
+  <data name="treeListColumn4.Visible" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="treeListColumn4.VisibleIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="treeList1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="treeList1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="treeList1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 488</value>
+  </data>
+  <data name="treeList1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;treeList1.Name" xml:space="preserve">
+    <value>treeList1</value>
+  </data>
+  <data name="&gt;&gt;treeList1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.TreeList, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;treeList1.Parent" xml:space="preserve">
+    <value>navBarGroupControlContainer1</value>
+  </data>
+  <data name="&gt;&gt;treeList1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="navBarGroupControlContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 488</value>
+  </data>
+  <data name="navBarGroupControlContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;navBarGroupControlContainer1.Name" xml:space="preserve">
+    <value>navBarGroupControlContainer1</value>
+  </data>
+  <data name="&gt;&gt;navBarGroupControlContainer1.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroupControlContainer, DevExpress.XtraNavBar.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarGroupControlContainer1.Parent" xml:space="preserve">
+    <value>navBarControlMain</value>
+  </data>
+  <data name="&gt;&gt;navBarGroupControlContainer1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="navBarItem1.Caption" xml:space="preserve">
     <value>navBarItem1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="navBarControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -585,60 +666,6 @@
   <data name="&gt;&gt;barSubItem5.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarSubItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;imageCollection32x32.Name" xml:space="preserve">
-    <value>imageCollection32x32</value>
-  </data>
-  <data name="&gt;&gt;imageCollection32x32.Type" xml:space="preserve">
-    <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
-    <value>ribbonPage1</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup1.Name" xml:space="preserve">
-    <value>ribbonPageGroup1</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup1.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
-    <value>ribbonPage2</value>
-  </data>
-  <data name="&gt;&gt;ribbonPage2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup2.Name" xml:space="preserve">
-    <value>ribbonPageGroup2</value>
-  </data>
-  <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
-    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;navBarGroup1.Name" xml:space="preserve">
-    <value>navBarGroup1</value>
-  </data>
-  <data name="&gt;&gt;navBarGroup1.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;navBarItem1.Name" xml:space="preserve">
-    <value>navBarItem1</value>
-  </data>
-  <data name="&gt;&gt;navBarItem1.Type" xml:space="preserve">
-    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;xtraTabbedMdiManager1.Name" xml:space="preserve">
-    <value>xtraTabbedMdiManager1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabbedMdiManager1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;imageCollection16x16.Name" xml:space="preserve">
-    <value>imageCollection16x16</value>
-  </data>
-  <data name="&gt;&gt;imageCollection16x16.Type" xml:space="preserve">
-    <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;barEditItem1.Name" xml:space="preserve">
     <value>barEditItem1</value>
   </data>
@@ -710,6 +737,84 @@
   </data>
   <data name="&gt;&gt;barDockingMenuItem3.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.BarDockingMenuItem, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;imageCollection32x32.Name" xml:space="preserve">
+    <value>imageCollection32x32</value>
+  </data>
+  <data name="&gt;&gt;imageCollection32x32.Type" xml:space="preserve">
+    <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
+    <value>ribbonPage1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Name" xml:space="preserve">
+    <value>ribbonPageGroup1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
+    <value>ribbonPage2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Name" xml:space="preserve">
+    <value>ribbonPageGroup2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarGroup1.Name" xml:space="preserve">
+    <value>navBarGroup1</value>
+  </data>
+  <data name="&gt;&gt;navBarGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarItem1.Name" xml:space="preserve">
+    <value>navBarItem1</value>
+  </data>
+  <data name="&gt;&gt;navBarItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabbedMdiManager1.Name" xml:space="preserve">
+    <value>xtraTabbedMdiManager1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabbedMdiManager1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;imageCollection16x16.Name" xml:space="preserve">
+    <value>imageCollection16x16</value>
+  </data>
+  <data name="&gt;&gt;imageCollection16x16.Type" xml:space="preserve">
+    <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;colName.Name" xml:space="preserve">
+    <value>colName</value>
+  </data>
+  <data name="&gt;&gt;colName.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;treeListColumn2.Name" xml:space="preserve">
+    <value>treeListColumn2</value>
+  </data>
+  <data name="&gt;&gt;treeListColumn2.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;treeListColumn3.Name" xml:space="preserve">
+    <value>treeListColumn3</value>
+  </data>
+  <data name="&gt;&gt;treeListColumn3.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;treeListColumn4.Name" xml:space="preserve">
+    <value>treeListColumn4</value>
+  </data>
+  <data name="&gt;&gt;treeListColumn4.Type" xml:space="preserve">
+    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>
