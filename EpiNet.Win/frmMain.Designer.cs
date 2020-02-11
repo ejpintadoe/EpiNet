@@ -604,6 +604,8 @@
             this.treeList1.OptionsView.ShowVertLines = false;
             this.treeList1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
+            this.treeList1.SelectImageList = this.imageCollection32x32;
+            this.treeList1.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeList1_FocusedNodeChanged);
             // 
             // colName
             // 

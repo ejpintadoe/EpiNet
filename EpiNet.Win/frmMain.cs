@@ -49,8 +49,17 @@ namespace EpiNet.Win
 
 
             TreeListNode tlAnnouncements = treeList1.AppendNode(new object[] { Properties.Resources.Announcements, MailType.Inbox, MailFolder.Announcements, 5 }, null);
+
             treeList1.AppendNode(new object[] { Properties.Resources.Inbox, MailType.Inbox, MailFolder.Announcements }, tlAnnouncements);
             treeList1.AppendNode(new object[] { Properties.Resources.SentItems, MailType.Sent, MailFolder.Announcements, 1 }, tlAnnouncements);
+
+            Type formtype = asm.GetType(string.Format("EpiNet.Win.{0}", "Ventas.Facturacion.frmFacturacion"));
+
+
+            //nbGroup.LargeImage = (Bitmap)(object)Properties.Resources.ResourceManager.GetObject(item.EPI_VCH_IMAGEN32x32 ?? "", CultureInfo.CurrentUICulture);
+            tlAnnouncements.Tag = new NavBarGroupTagObject("Facturacion", 6, formtype);
+
+
 
 
             this.GeneraMenu(oUsuario.Modulos.OrderBy(x => x.EPI_INT_ORDEN).ToList());
@@ -383,6 +392,24 @@ namespace EpiNet.Win
             //string ss = e.Item.Caption;
             new BLUsuario().updateSkinGallery(e.Item.Caption, oUsuario.Usuario.EPI_INT_IDUSUARIO);
 
+        }
+
+        private void treeList1_FocusedNodeChanged(object sender, FocusedNodeChangedEventArgs e)
+        {
+            if (e.Node.Tag == null) return;
+
+            NavBarGroupTagObject groupObject = e.Node.Tag as NavBarGroupTagObject;
+
+            if (groupObject.ModuleType == null) return;
+
+            modulesNavigator.ChangeNavBarGroup(groupObject);
+
+            groupObject.Module.MdiParent = this;
+            groupObject.Module.Text = groupObject.Name;
+            groupObject.Module.Show();
+
+            groupObject.Module.ShowModule(false);
+            this.GenerarOpciones(groupObject);
         }
     }
 }
