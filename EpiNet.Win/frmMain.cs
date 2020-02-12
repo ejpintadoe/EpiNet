@@ -29,6 +29,7 @@ namespace EpiNet.Win
         BEUsuario oUsuario = new BEUsuario();
         NavBarGroup nbGroup;
         NavBarItem nbItem;
+        TreeListNode treeListNode;
 
         ModulesNavigator modulesNavigator;
 
@@ -48,10 +49,10 @@ namespace EpiNet.Win
             modulesNavigator = new ModulesNavigator(ribbonControlMain, xtraTabbedMdiManager1);
 
 
-            TreeListNode tlAnnouncements = treeList1.AppendNode(new object[] { Properties.Resources.Announcements, MailType.Inbox, MailFolder.Announcements, 5 }, null);
+            TreeListNode tlAnnouncements = treeList1.AppendNode(new object[] { Properties.Resources.Announcements, MailType.Inbox, MailFolder.Announcements, 2 }, null);
 
-            treeList1.AppendNode(new object[] { Properties.Resources.Inbox, MailType.Inbox, MailFolder.Announcements }, tlAnnouncements);
-            treeList1.AppendNode(new object[] { Properties.Resources.SentItems, MailType.Sent, MailFolder.Announcements, 1 }, tlAnnouncements);
+            treeList1.AppendNode(new object[] { Properties.Resources.Inbox, MailType.Inbox, MailFolder.Announcements,2 }, tlAnnouncements);
+            treeList1.AppendNode(new object[] { Properties.Resources.SentItems, MailType.Sent, MailFolder.Announcements, 4 }, tlAnnouncements);
 
             Type formtype = asm.GetType(string.Format("EpiNet.Win.{0}", "Ventas.Facturacion.frmFacturacion"));
 
@@ -59,13 +60,12 @@ namespace EpiNet.Win
             //nbGroup.LargeImage = (Bitmap)(object)Properties.Resources.ResourceManager.GetObject(item.EPI_VCH_IMAGEN32x32 ?? "", CultureInfo.CurrentUICulture);
             tlAnnouncements.Tag = new NavBarGroupTagObject("Facturacion", 6, formtype);
 
+                       
+            //this.GeneraMenu(oUsuario.Modulos.OrderBy(x => x.EPI_INT_ORDEN).ToList());
+            this.GeneraMenuTreeList(oUsuario.Modulos.OrderBy(x => x.EPI_INT_ORDEN).ToList());
 
-
-
-            this.GeneraMenu(oUsuario.Modulos.OrderBy(x => x.EPI_INT_ORDEN).ToList());
-            
         }
-
+               
         void InitSkinGallery()
         {
             SkinHelper.InitSkinGallery(skinRibbonGalleryBarItem1, true);
@@ -125,6 +125,72 @@ namespace EpiNet.Win
                 }
             }
         }
+        void GeneraMenuTreeList(List<TBL_EPI_MODULO> olModulos)
+        {
+            int codPadre = 0;
+            Type formtype;
+
+            List<TBL_EPI_MODULO> olMenuPadre = (from p in olModulos where p.EPI_INT_MODULOPADRE == codPadre select p).ToList();
+
+            bool nieto = false;
+
+            foreach (var item in olMenuPadre)
+            {
+
+
+                //nbGroup = new NavBarGroup();
+                treeListNode = new TreeListNode();
+
+                formtype = asm.GetType(string.Format("EpiNet.Win.{0}", item.EPI_VCH_WINDOWSFORM));
+
+                treeListNode = treeList1.AppendNode(null, null);
+                treeListNode.SetValue("Name", item.EPI_VCH_NOMBREMODULO);
+                                                                      
+                //nbGroup.Caption = item.EPI_VCH_NOMBREMODULO;
+
+                if (item.EPI_INT_IMAGENINDEX32X32 != null && item.EPI_INT_IMAGENINDEX32X32 > -1)
+                {
+                    treeListNode.SetValue("ImageIndex", item.EPI_INT_IMAGENINDEX32X32);
+                }
+                else
+                {
+                    treeListNode.SetValue("ImageIndex", -1);
+                }
+                    
+                //nbGroup.LargeImage = imageCollection32x32.Images[Convert.ToInt32(item.EPI_INT_IMAGENINDEX32X32)];
+
+                //nbGroup.Tag = new NavBarGroupTagObject(item.EPI_VCH_NOMBREMODULO, item.EPI_INT_IDMODULO, formtype);
+
+                treeListNode.Tag = new NavBarGroupTagObject(item.EPI_VCH_NOMBREMODULO, item.EPI_INT_IDMODULO, formtype);
+                //navBarControlMain.Groups.Add(nbGroup);
+
+                //nieto = tieneNieto(item.EPI_INT_IDMODULO, olModulos);
+
+                //if (nieto == true)
+                //{
+                //    TreeList tree = new TreeList();
+                //    nbGroup.GroupStyle = NavBarGroupStyle.ControlContainer;
+                //    nbGroup.GroupClientHeight = 100;
+                   
+                //    tree = new TreeList();
+                    
+                //    //tree.StateImageList = navbarImageCollection;
+                //    construyeTreeList(tree, item.EPI_INT_IDMODULO, olModulos);
+                //    tree.LookAndFeel.ActiveLookAndFeel.UseDefaultLookAndFeel = true;
+                //    nbGroup.ControlContainer.Controls.Add(tree);
+                //}
+                //else
+                //{
+                //    nbItem = new NavBarItem();
+
+                //    navBarControlMain.BeginUpdate();
+                //    //SubMenu(nbItem, item.id, olMenu);
+                //    SubMenu(nbItem, item.EPI_INT_IDMODULO, olModulos);
+                //    navBarControlMain.EndUpdate();
+                //}
+            }
+        }
+
 
         public void GenerarOpciones(NavBarGroupTagObject groupObject)
         {

@@ -173,12 +173,6 @@
         J+0x6AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="barButtonItem9.Caption" xml:space="preserve">
-    <value>Cuenta</value>
-  </data>
-  <data name="barButtonItem10.Caption" xml:space="preserve">
-    <value>Cerrar Cesion</value>
-  </data>
   <assembly alias="DevExpress.Utils.v17.2" name="DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   <data name="barSubItem3.SuperTip" type="DevExpress.Utils.SuperToolTip, DevExpress.Utils.v17.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -206,6 +200,12 @@
         AAAL
 </value>
   </data>
+  <data name="barButtonItem9.Caption" xml:space="preserve">
+    <value>Cuenta</value>
+  </data>
+  <data name="barButtonItem10.Caption" xml:space="preserve">
+    <value>Cerrar Cesion</value>
+  </data>
   <data name="barLinkContainerItem1.Caption" xml:space="preserve">
     <value>Usuario</value>
   </data>
@@ -227,6 +227,9 @@
   <data name="barLinkContainerItem3.Caption" xml:space="preserve">
     <value>barLinkContainerItem3</value>
   </data>
+  <data name="barLinkContainerItem4.Caption" xml:space="preserve">
+    <value>barLinkContainerItem4</value>
+  </data>
   <data name="barHeaderItem1.Caption" xml:space="preserve">
     <value>barHeaderItem1</value>
   </data>
@@ -241,9 +244,6 @@
   </data>
   <data name="barSubItem4.Caption" xml:space="preserve">
     <value>barSubItem4</value>
-  </data>
-  <data name="barLinkContainerItem4.Caption" xml:space="preserve">
-    <value>barLinkContainerItem4</value>
   </data>
   <data name="barLinkContainerItem7.Caption" xml:space="preserve">
     <value>Usuarioss</value>
@@ -305,14 +305,8 @@
   <data name="ribbonControlMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="ribbonPageGroup1.Text" xml:space="preserve">
-    <value>ribbonPageGroup1</value>
-  </data>
   <data name="ribbonPage1.Text" xml:space="preserve">
     <value>INICIO</value>
-  </data>
-  <data name="ribbonPageGroup2.Text" xml:space="preserve">
-    <value>ribbonPageGroup2</value>
   </data>
   <data name="ribbonPage2.Text" xml:space="preserve">
     <value>VIEW</value>
@@ -350,8 +344,14 @@
   <data name="&gt;&gt;ribbonControlMain.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="ribbonPageGroup1.Text" xml:space="preserve">
+    <value>ribbonPageGroup1</value>
+  </data>
+  <data name="ribbonPageGroup2.Text" xml:space="preserve">
+    <value>ribbonPageGroup2</value>
+  </data>
   <data name="navBarGroup1.Caption" xml:space="preserve">
-    <value>Dashboard</value>
+    <value>Menu</value>
   </data>
   <data name="navBarGroupControlContainer1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
     <value>Control</value>
@@ -375,8 +375,25 @@
   <data name="treeList1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <metadata name="imageCollectionMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>551, 17</value>
+  </metadata>
+  <data name="imageCollectionMenu.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="imageCollectionMenu.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v17.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFtEZXZFeHByZXNzLlV0aWxzLnYxNy4yLCBWZXJzaW9uPTE3LjIu
+        MTMuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iODhkMTc1NGQ3MDBlNDlhDAMAAABR
+        U3lzdGVtLkRyYXdpbmcsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlU
+        b2tlbj1iMDNmNWY3ZjExZDUwYTNhBQEAAAAoRGV2RXhwcmVzcy5VdGlscy5JbWFnZUNvbGxlY3Rpb25T
+        dHJlYW1lcgIAAAAJSW1hZ2VTaXplBERhdGEEBxNTeXN0ZW0uRHJhd2luZy5TaXplAwAAAAICAAAABfz/
+        //8TU3lzdGVtLkRyYXdpbmcuU2l6ZQIAAAAFd2lkdGgGaGVpZ2h0AAAICAMAAAAgAAAAIAAAAAkFAAAA
+        DwUAAAAAAAAAAgs=
+</value>
+  </data>
   <data name="treeList1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 488</value>
+    <value>202, 488</value>
   </data>
   <data name="treeList1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -394,7 +411,7 @@
     <value>0</value>
   </data>
   <data name="navBarGroupControlContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 488</value>
+    <value>202, 488</value>
   </data>
   <data name="navBarGroupControlContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -421,10 +438,10 @@
     <value>0, 143</value>
   </data>
   <data name="resource.ExpandedWidth" type="System.Int32, mscorlib">
-    <value>169</value>
+    <value>202</value>
   </data>
   <data name="navBarControlMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 609</value>
+    <value>202, 609</value>
   </data>
   <data name="navBarControlMain.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -443,6 +460,20 @@
   </data>
   <data name="&gt;&gt;navBarControlMain.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <metadata name="imageCollection16x16.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>207, 17</value>
+  </metadata>
+  <data name="imageCollection16x16.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v17.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFtEZXZFeHByZXNzLlV0aWxzLnYxNy4yLCBWZXJzaW9uPTE3LjIu
+        MTMuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iODhkMTc1NGQ3MDBlNDlhDAMAAABR
+        U3lzdGVtLkRyYXdpbmcsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlU
+        b2tlbj1iMDNmNWY3ZjExZDUwYTNhBQEAAAAoRGV2RXhwcmVzcy5VdGlscy5JbWFnZUNvbGxlY3Rpb25T
+        dHJlYW1lcgIAAAAJSW1hZ2VTaXplBERhdGEEBxNTeXN0ZW0uRHJhd2luZy5TaXplAwAAAAICAAAABfz/
+        //8TU3lzdGVtLkRyYXdpbmcuU2l6ZQIAAAAFd2lkdGgGaGVpZ2h0AAAICAMAAAAQAAAAEAAAAAkFAAAA
+        DwUAAAAAAAAAAgs=
+</value>
   </data>
   <metadata name="xtraTabbedMdiManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -762,29 +793,17 @@
   <data name="&gt;&gt;repositoryItemButtonEdit1.Type" xml:space="preserve">
     <value>DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit, DevExpress.XtraEditors.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colType.Name" xml:space="preserve">
-    <value>colType</value>
-  </data>
-  <data name="&gt;&gt;colType.Type" xml:space="preserve">
-    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <data name="&gt;&gt;colFolder.Name" xml:space="preserve">
-    <value>colFolder</value>
-  </data>
-  <data name="&gt;&gt;colFolder.Type" xml:space="preserve">
-    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;colImageIndex.Name" xml:space="preserve">
     <value>colImageIndex</value>
   </data>
   <data name="&gt;&gt;colImageIndex.Type" xml:space="preserve">
     <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;colData.Name" xml:space="preserve">
-    <value>colData</value>
+  <data name="&gt;&gt;imageCollectionMenu.Name" xml:space="preserve">
+    <value>imageCollectionMenu</value>
   </data>
-  <data name="&gt;&gt;colData.Type" xml:space="preserve">
-    <value>DevExpress.XtraTreeList.Columns.TreeListColumn, DevExpress.XtraTreeList.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  <data name="&gt;&gt;imageCollectionMenu.Type" xml:space="preserve">
+    <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
   <data name="&gt;&gt;navBarItem1.Name" xml:space="preserve">
     <value>navBarItem1</value>
@@ -792,36 +811,22 @@
   <data name="&gt;&gt;navBarItem1.Type" xml:space="preserve">
     <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
-  <data name="&gt;&gt;xtraTabbedMdiManager1.Name" xml:space="preserve">
-    <value>xtraTabbedMdiManager1</value>
-  </data>
-  <data name="&gt;&gt;xtraTabbedMdiManager1.Type" xml:space="preserve">
-    <value>DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
   <data name="&gt;&gt;imageCollection16x16.Name" xml:space="preserve">
     <value>imageCollection16x16</value>
   </data>
   <data name="&gt;&gt;imageCollection16x16.Type" xml:space="preserve">
     <value>DevExpress.Utils.ImageCollection, DevExpress.Utils.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
   </data>
+  <data name="&gt;&gt;xtraTabbedMdiManager1.Name" xml:space="preserve">
+    <value>xtraTabbedMdiManager1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabbedMdiManager1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTabbedMdi.XtraTabbedMdiManager, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>frmMain</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
-  </data>
-  <metadata name="imageCollection16x16.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>207, 17</value>
-  </metadata>
-  <data name="imageCollection16x16.ImageStream" type="DevExpress.Utils.ImageCollectionStreamer, DevExpress.Utils.v17.2" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFtEZXZFeHByZXNzLlV0aWxzLnYxNy4yLCBWZXJzaW9uPTE3LjIu
-        MTMuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iODhkMTc1NGQ3MDBlNDlhDAMAAABR
-        U3lzdGVtLkRyYXdpbmcsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlU
-        b2tlbj1iMDNmNWY3ZjExZDUwYTNhBQEAAAAoRGV2RXhwcmVzcy5VdGlscy5JbWFnZUNvbGxlY3Rpb25T
-        dHJlYW1lcgIAAAAJSW1hZ2VTaXplBERhdGEEBxNTeXN0ZW0uRHJhd2luZy5TaXplAwAAAAICAAAABfz/
-        //8TU3lzdGVtLkRyYXdpbmcuU2l6ZQIAAAAFd2lkdGgGaGVpZ2h0AAAICAMAAAAQAAAAEAAAAAkFAAAA
-        DwUAAAAAAAAAAgs=
-</value>
   </data>
 </root>

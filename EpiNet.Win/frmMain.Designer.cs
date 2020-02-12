@@ -85,13 +85,11 @@
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.colName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.colType = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colFolder = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.colImageIndex = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colData = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.imageCollectionMenu = new DevExpress.Utils.ImageCollection(this.components);
             this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.imageCollection16x16 = new DevExpress.Utils.ImageCollection(this.components);
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel2)).BeginInit();
@@ -102,8 +100,9 @@
             this.navBarGroupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollectionMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection16x16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControlMain
@@ -589,14 +588,16 @@
             this.treeList1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
             this.colName,
-            this.colType,
-            this.colFolder,
-            this.colImageIndex,
-            this.colData});
+            this.colImageIndex});
             this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.treeList1, "treeList1");
             this.treeList1.Name = "treeList1";
             this.treeList1.OptionsBehavior.Editable = false;
+            this.treeList1.OptionsPrint.PrintHorzLines = false;
+            this.treeList1.OptionsPrint.PrintPageHeader = false;
+            this.treeList1.OptionsPrint.PrintReportFooter = false;
+            this.treeList1.OptionsPrint.PrintTree = false;
+            this.treeList1.OptionsPrint.PrintVertLines = false;
             this.treeList1.OptionsView.ShowColumns = false;
             this.treeList1.OptionsView.ShowHorzLines = false;
             this.treeList1.OptionsView.ShowIndentAsRowStyle = true;
@@ -604,7 +605,7 @@
             this.treeList1.OptionsView.ShowVertLines = false;
             this.treeList1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.treeList1.SelectImageList = this.imageCollection32x32;
+            this.treeList1.SelectImageList = this.imageCollectionMenu;
             this.treeList1.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeList1_FocusedNodeChanged);
             // 
             // colName
@@ -614,6 +615,7 @@
             this.colName.FieldName = "Name";
             this.colName.Name = "colName";
             this.colName.OptionsColumn.AllowFocus = false;
+            this.colName.OptionsFilter.PopupExcelFilterTextFilters = DevExpress.XtraTreeList.ExcelFilterTextFilters.TextFilters;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -622,33 +624,32 @@
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             // 
-            // colType
-            // 
-            this.colType.Name = "colType";
-            // 
-            // colFolder
-            // 
-            this.colFolder.Name = "colFolder";
-            // 
             // colImageIndex
             // 
             this.colImageIndex.FieldName = "ImageIndex";
             this.colImageIndex.Name = "colImageIndex";
             // 
-            // colData
+            // imageCollectionMenu
             // 
-            this.colData.FieldName = "colData";
-            this.colData.Name = "colData";
+            resources.ApplyResources(this.imageCollectionMenu, "imageCollectionMenu");
+            this.imageCollectionMenu.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imageCollectionMenu.ImageStream")));
+            this.imageCollectionMenu.InsertImage(global::EpiNet.Win.Properties.Resources.Venta_32x32, "Venta_32x32", typeof(global::EpiNet.Win.Properties.Resources), 0);
+            this.imageCollectionMenu.Images.SetKeyName(0, "Venta_32x32");
+            this.imageCollectionMenu.InsertImage(global::EpiNet.Win.Properties.Resources.Seguridad_32x32, "Seguridad_32x32", typeof(global::EpiNet.Win.Properties.Resources), 1);
+            this.imageCollectionMenu.Images.SetKeyName(1, "Seguridad_32x32");
+            this.imageCollectionMenu.InsertGalleryImage("buy_32x32.png", "devav/actions/buy_32x32.png", DevExpress.Images.ImageResourceCache.Default.GetImage("devav/actions/buy_32x32.png"), 2);
+            this.imageCollectionMenu.Images.SetKeyName(2, "buy_32x32.png");
+            this.imageCollectionMenu.InsertGalleryImage("usergroup_32x32.png", "office2013/people/usergroup_32x32.png", DevExpress.Images.ImageResourceCache.Default.GetImage("office2013/people/usergroup_32x32.png"), 3);
+            this.imageCollectionMenu.Images.SetKeyName(3, "usergroup_32x32.png");
+            this.imageCollectionMenu.InsertGalleryImage("ide_32x32.png", "office2013/programming/ide_32x32.png", DevExpress.Images.ImageResourceCache.Default.GetImage("office2013/programming/ide_32x32.png"), 4);
+            this.imageCollectionMenu.Images.SetKeyName(4, "ide_32x32.png");
+            this.imageCollectionMenu.InsertGalleryImage("ide_32x32.png", "images/programming/ide_32x32.png", DevExpress.Images.ImageResourceCache.Default.GetImage("images/programming/ide_32x32.png"), 5);
+            this.imageCollectionMenu.Images.SetKeyName(5, "ide_32x32.png");
             // 
             // navBarItem1
             // 
             resources.ApplyResources(this.navBarItem1, "navBarItem1");
             this.navBarItem1.Name = "navBarItem1";
-            // 
-            // xtraTabbedMdiManager1
-            // 
-            this.xtraTabbedMdiManager1.MdiParent = this;
-            this.xtraTabbedMdiManager1.SelectedPageChanged += new System.EventHandler(this.xtraTabbedMdiManager1_SelectedPageChanged);
             // 
             // imageCollection16x16
             // 
@@ -682,6 +683,11 @@
             this.imageCollection16x16.InsertGalleryImage("meeting_16x16.png", "devav/view/meeting_16x16.png", DevExpress.Images.ImageResourceCache.Default.GetImage("devav/view/meeting_16x16.png"), 13);
             this.imageCollection16x16.Images.SetKeyName(13, "meeting_16x16.png");
             // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            this.xtraTabbedMdiManager1.SelectedPageChanged += new System.EventHandler(this.xtraTabbedMdiManager1_SelectedPageChanged);
+            // 
             // frmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -706,8 +712,9 @@
             this.navBarGroupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollectionMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection16x16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -772,10 +779,8 @@
         private DevExpress.XtraNavBar.NavBarGroupControlContainer navBarGroupControlContainer1;
         private DevExpress.XtraTreeList.TreeList treeList1;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colName;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colType;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colFolder;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colImageIndex;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colData;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn colImageIndex;
+        private DevExpress.Utils.ImageCollection imageCollectionMenu;
     }
 }
